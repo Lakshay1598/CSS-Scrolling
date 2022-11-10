@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Animation</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque quod consequuntur voluptatibus vero quam
+            illo alias numquam vel illum fuga, provident officiis minima pariatur quisquam mollitia cumque. Quo,
+            assumenda repudiandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur optio animi in
+            doloremque quibusdam fugit repellendus eius sed. Nobis, vero. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. illum fuga, provident officiis minima pariatur quisquam mollitia cumque. Quo,
+            assumenda repudiandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur optio animi in
+            doloremque quibusdam fugit repellendus eius sed. Nobis, vero. <br><br> Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Culpa sunt vel error consequatur, quo non quod fugiat architecto cumque
+            voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sapiente minus adipisci amet
+            voluptate labore eveniet maxime dolores nulla ipsa.
+            Quisquam provident omnis laudantium facere ut sapiente at vel earum labore reprehenderit debitis
+            consequuntur nobis, molestias vitae asperiores sunt, obcaecati amet est ipsa. Quis totam perferendis
+            inventore numquam voluptatem optio? <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Veniam ea recusandae corporis, iusto nam dolorem voluptatum dolores exercitationem autem natus, sed deserunt
+            repudiandae sunt reiciendis doloribus quod ab, sequi commodi quia debitis illum? Modi autem rem dolores
+            accusantium quia porro illo delectus cum sapiente eum, at ex placeat quo qui fugiat animi praesentium
+            repellat dignissimos? Doloremque quam impedit, necessitatibus sapiente accusamus explicabo molestiae soluta
+            in nemo aliquam, blanditiis, quibusdam ex. Fuga delectus consequuntur tempore quibusdam, asperiores culpa
+            repellat iste tenetur!Quisquam provident omnis laudantium facere ut sapiente at vel earum labore reprehenderit debitis
+            consequuntur nobis, molestias vitae asperiores sunt, obcaecati amet est ipsa. Quis totam perferendis
+            inventore numquam voluptatem optio? <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Veniam ea recusandae corporis, iusto nam dolorem voluptatum dolores exercitationem autem natus, sed deserunt
+            repudiandae sunt reiciendis doloribus quod ab, sequi commodi quia debitis illum? Modi autem rem dolores
+            accusantium quia porro illo delectus cum sapiente eum, at ex placeat quo qui fugiat animi praesentium
+            repellat dignissimos? Doloremque quam impedit, necessitatibus sapiente accusamus explicabo molestiae soluta
+            in nemo aliquam, blanditiis, quibusdam ex. Fuga delectus consequuntur tempore quibusdam, asperiores culpa
+            repellat iste tenetur! </p>
+    </div>
+
+    <script>
+        let moon = document.getElementById('moon');
+        let stars = document.getElementById('stars');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front');
+        let btn = document.getElementById('btn');
+        let text = document.getElementById('text');
+        
+        window.addEventListener('scroll' ,function(){
+            let value = window.scrollY;
+            stars.style.left = value*0.25 + 'px';  
+            moon.style.top = value*1.05 + 'px'; 
+            mountains_behind.style.top = value*0.5 + 'px';  
+            mountains_front.style.top = value*0 + 'px';  
+            text.style.marginRight = value *3.5 + 'px';
+            text.style.marginTop = value *1.5 + 'px';
+            btn.style.marginTop = value *1.5 + 'px';
+            header.style.top = value*0.5 + 'px';
+        });
+    </script>
+
+</body>
+
+</html>
